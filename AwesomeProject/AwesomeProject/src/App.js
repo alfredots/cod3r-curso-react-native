@@ -1,8 +1,20 @@
 import React from 'react'
-import {Text} from 'react-native'
+import {Text, View, StyleSheet} from 'react-native'
+import Contador from './components/Contador'
 
-function App() {
-  return <Text>Teste</Text>
+export default () => {
+  return (
+    <View style={style.App}>
+      <Contador initialValue={100} step={10} />
+    </View>
+  )
 }
 
-export default App
+const style = StyleSheet.create({
+  App: {
+    backgroundColor: 'lightgray',
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
